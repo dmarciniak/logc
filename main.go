@@ -4,14 +4,13 @@ import (
 	"github.com/dmarciniak/loge"
 	"fmt"
 	"os"
-	"strconv"
 )
 
 func main() {
 	output := loge.LogLoader(loadFilenames())
 
 	for entry := <-output; !entry.IsEOF(); entry = <-output {
-		fmt.Println(entry.FileName + " " + entry.Date.String() + " " + strconv.Itoa(entry.LineNo) + ": " + entry.Log)
+		fmt.Println(entry.Log)
 	}
 }
 
