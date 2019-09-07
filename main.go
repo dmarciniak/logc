@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/dmarciniak/loge"
 	"fmt"
+	"github.com/dmarciniak/loge"
 	"os"
 )
 
